@@ -113,6 +113,8 @@ const translations = {
     'cases.c3.desc': 'Store complex docker commands, nginx configurations, standard conventional commits, cURL endpoints, and frequent SQL queries.',
     'cases.c4.title': 'Freelancers & Creators',
     'cases.c4.desc': 'Instantly send service rates, social media links, portfolio URLs, invoice details, and standard contract agreements.',
+    'cases.c5.title': 'AI Prompts (ChatGPT & Claude)',
+    'cases.c5.desc': 'Store your master system prompts, code review personas, and translation templates. Trigger 200-word complex AI instructions with a single shortcut.',
 
     'faq.tag': 'FAQ',
     'faq.title': 'Frequently Asked Questions',
@@ -124,11 +126,13 @@ const translations = {
     'faq.a3': 'Yes! QuickMessage synchronizes snippets through your private Apple iCloud (CloudKit). Your data is encrypted and stored strictly in your own iCloud Private Database without any intermediate servers.',
     'faq.q4': 'Which Mac computers are supported?',
     'faq.a4': 'QuickMessage runs natively on both Apple Silicon (M1, M2, M3, M4) and Intel Macs, fully supporting macOS 12 (Monterey), macOS 13 (Ventura), macOS 14 (Sonoma), and macOS 15 (Sequoia).',
+    'faq.q5': 'Does QuickMessage work with web apps and AI chat tools like ChatGPT or Claude?',
+    'faq.a5': 'Yes, absolutely! QuickMessage operates system-wide across all macOS browsers (Safari, Chrome, Arc, Brave) and native apps. You can expand complex AI prompts, code review templates, and custom instructions directly into ChatGPT with a single keystroke.',
 
     'cta.title': 'Ready to Accelerate Your Typing?',
     'cta.desc': 'Download QuickMessage and start saving hours of repetitive typing every week.',
-    'cta.btn': 'Download QuickMessage for Mac',
-    'cta.sub': 'Compatible with macOS 12+ • Apple Silicon & Intel • Instant setup',
+    'cta.btn': 'Download on the Mac App Store',
+    'cta.sub': 'Compatible with macOS 12+ • Apple Silicon & Intel • Verified by Apple',
 
     'footer.brand.desc': 'Next-generation smart text expander for macOS. Boost productivity, eliminate repetitive typing, and keep your data 100% private.',
     'footer.col1': 'Features',
@@ -228,6 +232,8 @@ const translations = {
     'cases.c3.desc': 'Lưu các câu lệnh docker phức tạp, snippet cấu hình nginx, mẫu commit chuẩn conventional commit, cURL endpoint và SQL queries thường dùng.',
     'cases.c4.title': 'Freelancer & Sáng Tạo Nội Dung',
     'cases.c4.desc': 'Gửi báo giá dịch vụ, link mạng xã hội cá nhân, portfolio, thông tin xuất hóa đơn đỏ và điều khoản hợp đồng tức thì cho đối tác.',
+    'cases.c5.title': 'Soạn Prompt AI (ChatGPT & Claude)',
+    'cases.c5.desc': 'Lưu trữ toàn bộ kho prompt mẫu cho ChatGPT, Claude và Gemini. Không còn phải gõ đi gõ lại những đoạn prompt dài hàng trăm chữ mỗi ngày.',
 
     'faq.tag': 'HỎI ĐÁP',
     'faq.title': 'Câu Hỏi Thường Gặp',
@@ -239,11 +245,13 @@ const translations = {
     'faq.a3': 'Có! QuickMessage tích hợp đồng bộ thông qua Apple iCloud (CloudKit). Dữ liệu được mã hoá và lưu trực tiếp trong vùng lưu trữ iCloud cá nhân của bạn, không thông qua bất kỳ server trung gian nào của bên thứ ba.',
     'faq.q4': 'Ứng dụng hỗ trợ những dòng máy Mac nào?',
     'faq.a4': 'QuickMessage hỗ trợ cả chip Apple Silicon (M1, M2, M3, M4) lẫn các dòng máy Mac sử dụng chip Intel, tương thích với macOS 12 (Monterey), macOS 13 (Ventura), macOS 14 (Sonoma) và macOS 15 (Sequoia).',
+    'faq.q5': 'QuickMessage có hoạt động trên trình duyệt web và các công cụ chat AI như ChatGPT, Claude không?',
+    'faq.a5': 'Có, hoàn toàn tương thích! QuickMessage hoạt động trên toàn hệ thống macOS và mọi trình duyệt web (Safari, Chrome, Arc, Brave). Bạn có thể dễ dàng chèn các prompt phức tạp hay câu lệnh dài trực tiếp vào ô chat của ChatGPT chỉ trong 1 giây.',
 
     'cta.title': 'Sẵn Sàng Tăng Tốc Độ Gõ Phím Của Bạn?',
     'cta.desc': 'Tải QuickMessage và bắt đầu tiết kiệm hàng giờ gõ các đoạn văn bản lặp lại mỗi tuần ngay từ hôm nay.',
-    'cta.btn': 'Tải Bản Cài Đặt (.dmg) Miễn Phí',
-    'cta.sub': 'Tương thích macOS 12+ • Apple Silicon & Intel • Cài đặt và sử dụng ngay lập tức',
+    'cta.btn': 'Tải trên Mac App Store',
+    'cta.sub': 'Tương thích macOS 12+ • Apple Silicon & Intel • Đã được Apple kiểm duyệt',
 
     'footer.brand.desc': 'Ứng dụng gõ tắt thông minh hàng đầu cho macOS. Tối ưu hoá năng suất, tiết kiệm thời gian và đảm bảo an toàn dữ liệu tuyệt đối.',
     'footer.col1': 'Tính Năng',
@@ -776,6 +784,11 @@ const playgroundSnippetsI18n = {
       trigger: '\\hotline',
       title: '24/7 Customer Support',
       body: 'Support Hotline: (+1) 800-555-0199 (Available 24/7 Monday to Sunday)'
+    },
+    {
+      trigger: '\\gpt',
+      title: 'ChatGPT / AI Code Review Prompt',
+      body: 'Act as a Principal Software Engineer. Review the following code for edge cases, performance bottlenecks, and security flaws. Suggest idiomatic refactoring improvements:\n\n[Paste code here]'
     }
   ],
   vi: [
@@ -803,6 +816,11 @@ const playgroundSnippetsI18n = {
       trigger: '\\hotline',
       title: 'Tổng đài hỗ trợ 24/7',
       body: 'Hotline CSKH: 1900 6868 (Hỗ trợ 24/7 từ Thứ 2 đến Chủ Nhật)'
+    },
+    {
+      trigger: '\\gpt',
+      title: 'Prompt Mẫu Cho ChatGPT / Claude',
+      body: 'Hãy đóng vai một chuyên gia cao cấp. Phân tích, sửa lỗi và tối ưu lại đoạn nội dung sau để đạt hiệu quả cao nhất, trình bày bằng gạch đầu dòng rõ ràng:\n\n[Dán nội dung tại đây]'
     }
   ]
 };
@@ -952,11 +970,23 @@ function initFaqAccordion() {
 
   faqItems.forEach(item => {
     const questionBtn = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    if (!questionBtn || !answer) return;
+
     questionBtn.addEventListener('click', () => {
       const isOpen = item.classList.contains('active');
-      faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+
+      // Close all items
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        const otherAnswer = otherItem.querySelector('.faq-answer');
+        if (otherAnswer) otherAnswer.style.maxHeight = null;
+      });
+
+      // Toggle clicked item
       if (!isOpen) {
         item.classList.add('active');
+        answer.style.maxHeight = (answer.scrollHeight + 32) + 'px';
       }
     });
   });
@@ -965,12 +995,10 @@ function initFaqAccordion() {
 /* ==========================================================================
    6. Global Actions & Helpers
    ========================================================================== */
+const MAC_APP_STORE_URL = 'https://apps.apple.com/us/app/quickmessage-text-expander/id6818796098';
+
 function handleDownload() {
-  const isEn = currentLang === 'en';
-  const alertMsg = isEn 
-    ? "Thank you for your interest! QuickMessage (.dmg) build is being prepared for immediate download."
-    : "Cảm ơn bạn đã quan tâm! Bộ cài đặt QuickMessage (.dmg) đang được chuẩn bị để tải về.";
-  alert(alertMsg);
+  window.open(MAC_APP_STORE_URL, '_blank', 'noopener,noreferrer');
 }
 
 function escapeHtml(str) {
