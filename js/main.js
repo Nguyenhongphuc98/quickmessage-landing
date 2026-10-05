@@ -447,7 +447,7 @@ const heroScenariosI18n = {
           keyword: 'sig',
           title: 'Corporate Signature',
           preview: 'Best regards — Alex Nguyen | Lead Engineer',
-          expanded: 'Best regards,\nAlex Nguyen | Lead Product Engineer\nEmail: alex@quickmessage.app • Mobile: (+1) 415-555-0199\nQuickMessage Inc. • Native macOS Experience'
+          expanded: 'Best regards,\nAlex Nguyen | Lead Product Engineer\nEmail: alex@qmessage.online • Mobile: (+1) 415-555-0199\nQuickMessage Inc. • Native macOS Experience'
         }
       ]
     },
@@ -765,7 +765,7 @@ const playgroundSnippetsI18n = {
     {
       trigger: '\\sig',
       title: 'Professional Email Signature',
-      body: 'Best regards,\nAlex Nguyen | Lead Product Engineer\nEmail: contact@quickmessage.app\nPhone: (+1) 415-555-0199'
+      body: 'Best regards,\nAlex Nguyen | Lead Product Engineer\nEmail: contact@qmessage.online\nPhone: (+1) 415-555-0199'
     },
     {
       trigger: '\\meeting',
@@ -792,7 +792,7 @@ const playgroundSnippetsI18n = {
     {
       trigger: '\\sig',
       title: 'Chữ ký Email Chuyên Nghiệp',
-      body: 'Trân trọng,\nNguyễn Văn A | Product Lead\nEmail: contact@quickmessage.app\nPhone: (+84) 901 234 567'
+      body: 'Trân trọng,\nNguyễn Văn A | Product Lead\nEmail: contact@qmessage.online\nPhone: (+84) 901 234 567'
     },
     {
       trigger: '\\email',
