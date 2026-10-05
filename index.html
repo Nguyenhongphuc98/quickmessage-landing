@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page.title">QuickMessage — Native Text Expander for macOS</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="QuickMessage — Native Text Expander for macOS">
+  <meta name="description" content="A blazing-fast native text expander for macOS. Expand shortcuts into full text instantly with 100% private local processing, encrypted iCloud sync, lightweight memory footprint and zero background battery drain.">
+  <meta name="keywords" content="text expander mac, macos text expander, mac text replacement, snippet manager mac, shortcut expander mac, typing accelerator mac, auto text expander, offline text expander, private text expander, icloud snippet sync, native mac productivity app, mac keyboard shortcuts, quick message mac, gõ tắt mac, ứng dụng gõ tắt mac, gõ tắt macos, phần mềm gõ tắt macbook, mở rộng văn bản mac, quản lý snippet mac, gõ nhanh macos, text expander mac tieng viet">
+  <meta name="author" content="QuickMessage">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#121214">
+  <link rel="canonical" href="https://quickmessage.app/">
+
+  <!-- Open Graph / Facebook / LinkedIn / Zalo -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quickmessage.app/">
+  <meta property="og:site_name" content="QuickMessage">
+  <meta property="og:title" content="QuickMessage — Native Text Expander for macOS">
+  <meta property="og:description" content="Type less, work faster, and save time. Native text expander for macOS with 100% private local processing and encrypted Apple iCloud sync.">
+  <meta property="og:image" content="assets/app-preview.png">
+  <meta property="og:image:alt" content="QuickMessage macOS Manager Interface">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://quickmessage.app/">
+  <meta name="twitter:title" content="QuickMessage — Native Text Expander for macOS">
+  <meta name="twitter:description" content="Type less, work faster, and save time. Native text expander for macOS with 100% private local processing and encrypted Apple iCloud sync.">
+  <meta name="twitter:image" content="assets/app-preview.png">
+
+  <!-- Structured Data (JSON-LD) for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "QuickMessage",
+    "operatingSystem": "macOS 12.0 or later",
+    "applicationCategory": "ProductivityApplication",
+    "description": "Native macOS text expander and snippet manager. Expand custom shortcuts into complete text templates instantly across all macOS apps with 100% offline local processing and encrypted iCloud sync.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Instant keystroke snippet expansion",
+      "100% local offline processing",
+      "End-to-end encrypted Apple iCloud sync",
+      "Apple Keychain encryption",
+      "Ultra-lightweight memory footprint under 20MB",
+      "Zero background idle CPU usage",
+      "Instant fuzzy search popup with prefix \\",
+      "Universal Binary for Apple Silicon and Intel Macs"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <span>QuickMessage</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#playground" class="nav-link" data-i18n="nav.playground">Live Playground</a></li>
+          <li><a href="#privacy" class="nav-link" data-i18n="nav.privacy">Privacy</a></li>
+          <li><a href="#sync" class="nav-link" data-i18n="nav.sync">iCloud Sync</a></li>
+          <li><a href="#performance" class="nav-link" data-i18n="nav.performance">Performance</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Switcher (EN / VI) -->
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-divider">/</span>
+          <button class="lang-btn" data-lang="vi">VI</button>
+        </div>
+
+        <button class="btn btn-primary btn-sm" onclick="handleDownload()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2.02.6-2.66 1.36-.58.68-1.09 1.76-0.96 2.79 1.01.08 2.06-.52 2.7-1.3"/>
+          </svg>
+          <span data-i18n="nav.download">Download for Mac</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-badge-wrap">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span data-i18n="hero.badge">Next-generation native text expander for macOS</span>
+        </div>
+      </div>
+
+      <h1 class="hero-title" data-i18n="hero.title">
+        Type Less. <br>
+        <span class="gradient-blue">Work Faster. Save Time.</span>
+      </h1>
+
+      <p class="hero-description" data-i18n="hero.desc">
+        QuickMessage instantly expands shortcuts like <code class="trigger-highlight">\bank</code>, <code class="trigger-highlight">\email</code>, <code class="trigger-highlight">\sig</code> into complete text in Telegram, Apple Mail, Slack, Notion, or any app you use.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" onclick="handleDownload()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2.02.6-2.66 1.36-.58.68-1.09 1.76-0.96 2.79 1.01.08 2.06-.52 2.7-1.3"/>
+          </svg>
+          <span data-i18n="hero.btn.download">Download QuickMessage for Mac</span>
+        </button>
+
+        <a href="#playground" class="btn btn-secondary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          <span data-i18n="hero.btn.try">Try Live Interactive Demo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Interactive macOS Window Showcase -->
+    <div class="container hero-showcase">
+      <div class="showcase-glow"></div>
+      
+      <div class="macos-window">
+        <!-- Titlebar -->
+        <div class="macos-titlebar">
+          <div class="traffic-lights">
+            <span class="traffic-light close"></span>
+            <span class="traffic-light minimize"></span>
+            <span class="traffic-light maximize"></span>
+          </div>
+
+          <!-- Scenario Switcher Tabs -->
+          <div class="showcase-tabs">
+            <button class="showcase-tab active" data-scenario="chat">
+              <span data-i18n="showcase.tab.chat">💬 Chat (Bank Info)</span>
+            </button>
+            <button class="showcase-tab" data-scenario="email">
+              <span data-i18n="showcase.tab.mail">✉️ Mail (Auto Reply)</span>
+            </button>
+            <button class="showcase-tab" data-scenario="signature">
+              <span data-i18n="showcase.tab.sig">✍️ Signature</span>
+            </button>
+            <button class="showcase-tab" data-scenario="coding">
+              <span data-i18n="showcase.tab.dev">💻 Terminal / Dev</span>
+            </button>
+          </div>
+
+          <div class="window-status-pill">
+            <span>● macOS Sonoma / Sequoia</span>
+          </div>
+        </div>
+
+        <!-- Simulated App Canvas -->
+        <div class="window-canvas">
+          <!-- App Header -->
+          <div class="app-mock-header">
+            <div class="app-mock-avatar" id="demoAvatar">TL</div>
+            <div class="app-mock-info">
+              <div class="app-mock-name" id="demoAppName">Telegram</div>
+              <div class="app-mock-sub" id="demoAppSub">Messaging with Client</div>
+            </div>
+          </div>
+
+          <!-- App Conversation / Workspace Body -->
+          <div class="app-mock-body">
+            <div class="chat-bubble chat-incoming" id="demoIncomingMsg">
+              Could you please send over your bank account details for invoice payment?
+            </div>
+            
+            <div class="chat-bubble chat-outgoing" id="demoOutgoingWrap" style="display: none;">
+              <!-- Expanded snippet will appear here -->
+            </div>
+          </div>
+
+          <!-- Simulated Input Bar with Floating QuickMessage Overlay -->
+          <div class="app-mock-input-wrap">
+            <div class="app-mock-input-box">
+              <div class="typed-text-display" id="demoTextDisplay">
+                <span class="cursor-blink"></span>
+              </div>
+            </div>
+
+            <!-- QuickMessage Overlay Completion -->
+            <div class="qm-overlay-popup" id="demoOverlay">
+              <div class="qm-overlay-header">
+                <div class="qm-overlay-title">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                  QuickMessage
+                </div>
+                <div class="qm-overlay-hint">
+                  <span class="key-badge">↑</span>
+                  <span class="key-badge">↓</span>
+                  <span class="key-badge">↵</span>
+                </div>
+              </div>
+              <ul class="qm-overlay-list" id="demoOverlayList">
+                <!-- Dynamically populated snippet items -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Showcase Control Bar -->
+        <div class="showcase-control-bar">
+          <div class="demo-step-indicator">
+            <span class="badge-dot"></span>
+            <span class="step-label" id="demoStepLabel">Simulating real-time keyboard expansion...</span>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="demo-action-btn" id="heroReplayBtn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 4v6h-6M1 20v-6h6"/>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+              </svg>
+              <span data-i18n="showcase.replay">Replay</span>
+            </button>
+            <button class="demo-action-btn" id="heroTogglePlayBtn">
+              <span data-i18n="showcase.pause">⏸ Pause</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Playground Section -->
+  <section id="playground" class="playground-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="play.tag">LIVE PLAYGROUND</span>
+        <h2 class="section-title" data-i18n="play.title">Try QuickMessage Keystroke Expansion</h2>
+        <p class="section-desc" data-i18n="play.desc">Type <code class="trigger-highlight">\</code> or click the shortcuts below to experience instant snippet suggestions.</p>
+      </div>
+
+      <div class="playground-card">
+        <div class="playground-instructions">
+          <span style="font-size: 13px; font-weight: 600; color: var(--text-secondary);" data-i18n="play.quick_label">QUICK SHORTCUTS:</span>
+          <div class="quick-triggers-list">
+            <button class="quick-trigger-pill" data-trigger="\bank">\bank (Bank Info)</button>
+            <button class="quick-trigger-pill" data-trigger="\email">\email (Email Template)</button>
+            <button class="quick-trigger-pill" data-trigger="\sig">\sig (Signature)</button>
+            <button class="quick-trigger-pill" data-trigger="\hotline">\hotline (Support)</button>
+            <button class="quick-trigger-pill" data-trigger="\curl">\curl (API cURL)</button>
+          </div>
+        </div>
+
+        <div class="interactive-input-container">
+          <textarea 
+            id="playgroundTextarea" 
+            class="interactive-textarea" 
+            data-i18n-placeholder="play.placeholder"
+            placeholder="Click here and type \bank or \sig..."
+            spellcheck="false"
+          ></textarea>
+
+          <!-- Floating popup for playground -->
+          <div class="playground-popup" id="playgroundPopup">
+            <div class="qm-overlay-header">
+              <div class="qm-overlay-title">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                QuickMessage
+              </div>
+              <div class="qm-overlay-hint">
+                <span class="key-badge">Enter</span>
+              </div>
+            </div>
+            <ul class="qm-overlay-list" id="playgroundPopupList"></ul>
+          </div>
+        </div>
+
+        <div class="playground-status">
+          <span id="playgroundStatus" data-i18n="play.status.initial">Type \ to trigger instant snippet completion...</span>
+          <span style="color: var(--text-tertiary);" data-i18n="play.hint">Use Arrow keys & Enter to quickly select</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Privacy First -->
+  <section id="privacy">
+    <div class="container">
+      <div class="privacy-banner">
+        <div class="section-header" style="margin-bottom: 32px; text-align: left;">
+          <span class="section-tag" style="color: var(--accent-green);" data-i18n="privacy.tag">ABSOLUTE PRIVACY & SECURITY</span>
+          <h2 class="section-title" data-i18n="privacy.title">"Your data never leaves your device."</h2>
+          <p class="section-desc" data-i18n="privacy.desc">
+            QuickMessage is designed privacy-first from the ground up. No tracking servers, no cloud keystroke logging, and zero content telemetry.
+          </p>
+        </div>
+
+        <div class="privacy-grid">
+          <div class="privacy-card">
+            <div class="privacy-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="privacy-card-title" data-i18n="privacy.card1.title">100% Local Processing</h3>
+            <p class="privacy-card-desc" data-i18n="privacy.card1.desc">
+              All shortcut expansions are processed entirely in memory on your Mac. Everything runs 100% offline with zero external network requests.
+            </p>
+          </div>
+
+          <div class="privacy-card">
+            <div class="privacy-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </div>
+            <h3 class="privacy-card-title" data-i18n="privacy.card2.title">Zero Data Collection</h3>
+            <p class="privacy-card-desc" data-i18n="privacy.card2.desc">
+              Zero telemetry. The app never records keystrokes (no keylogging), does not track typing behavior, and contains no third-party tracking SDKs.
+            </p>
+          </div>
+
+          <div class="privacy-card">
+            <div class="privacy-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+              </svg>
+            </div>
+            <h3 class="privacy-card-title" data-i18n="privacy.card3.title">Apple Keychain Security</h3>
+            <p class="privacy-card-desc" data-i18n="privacy.card3.desc">
+              Your local database is fully secured. The encryption key is randomly generated upon install and stored securely inside your macOS Keychain.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: iCloud Cross-Device Sync -->
+  <section id="sync">
+    <div class="container sync-container">
+      <div class="sync-content">
+        <span class="section-tag" data-i18n="sync.tag">APPLE CLOUD SYNC</span>
+        <h2 class="section-title" data-i18n="sync.title">Instant synchronization via your personal Apple iCloud.</h2>
+        <p class="section-desc" data-i18n="sync.desc">
+          All your snippets and shortcuts sync automatically between your MacBook, Mac mini, and iMac using Apple CloudKit.
+        </p>
+
+        <ul class="feature-checklist">
+          <li class="checklist-item">
+            <div class="checklist-icon">✓</div>
+            <div data-i18n="sync.item1">
+              <strong>No secondary account or password needed:</strong> 
+              Automatically authenticated via your signed-in Apple ID on macOS.
+            </div>
+          </li>
+          <li class="checklist-item">
+            <div class="checklist-icon">✓</div>
+            <div data-i18n="sync.item2">
+              <strong>End-to-End Encrypted:</strong> 
+              Your data resides strictly in your personal iCloud Private Database. Nobody else can ever access it.
+            </div>
+          </li>
+          <li class="checklist-item">
+            <div class="checklist-icon">✓</div>
+            <div data-i18n="sync.item3">
+              <strong>Seamless real-time updates:</strong> 
+              Add a snippet on your work MacBook, and it is immediately available on your home iMac.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- iCloud Visual Diagram -->
+      <div class="sync-visual">
+        <div class="icloud-hub">
+          <svg class="icloud-hub-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+          </svg>
+          <span class="icloud-hub-label">Apple iCloud</span>
+        </div>
+
+        <div class="sync-devices-row">
+          <div class="device-card">
+            <div class="device-icon">💻</div>
+            <div class="device-name">MacBook Pro</div>
+            <div class="device-status">
+              <span class="device-status-dot"></span>
+              <span data-i18n="sync.synced">Synced</span>
+            </div>
+          </div>
+
+          <div class="device-card">
+            <div class="device-icon">☁️</div>
+            <div class="device-name">iCloud CloudKit</div>
+            <div class="device-status">
+              <span class="device-status-dot"></span>
+              <span data-i18n="sync.private">Private DB</span>
+            </div>
+          </div>
+
+          <div class="device-card">
+            <div class="device-icon">🖥️</div>
+            <div class="device-name">iMac Studio</div>
+            <div class="device-status">
+              <span class="device-status-dot"></span>
+              <span data-i18n="sync.synced">Synced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Blazing Fast & Native Performance -->
+  <section id="performance">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="perf.tag">NATIVE PERFORMANCE</span>
+        <h2 class="section-title" data-i18n="perf.title">Ultra-Lightweight. Instant Response.</h2>
+        <p class="section-desc" data-i18n="perf.desc">
+          Engineered natively for macOS. Zero bloat, zero background lag, and zero battery drain.
+        </p>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-number gradient-blue">&lt; 20MB</div>
+          <div class="metric-label" data-i18n="perf.m1.lbl">Memory Footprint</div>
+          <div class="metric-sub" data-i18n="perf.m1.sub">Uses over 90% less RAM than typical desktop apps</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-number gradient-blue">&lt; 1ms</div>
+          <div class="metric-label" data-i18n="perf.m2.lbl">Response Time</div>
+          <div class="metric-sub" data-i18n="perf.m2.sub">Instant snippet expansion under every keystroke</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-number gradient-blue">0.0%</div>
+          <div class="metric-label" data-i18n="perf.m3.lbl">Idle CPU Usage</div>
+          <div class="metric-sub" data-i18n="perf.m3.sub">Completely silent in the background. Never drains battery.</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-number gradient-blue">100%</div>
+          <div class="metric-label" data-i18n="perf.m4.lbl">Native Architecture</div>
+          <div class="metric-sub" data-i18n="perf.m4.sub">Designed exclusively for macOS Sonoma, Sequoia & Apple Silicon / Intel.</div>
+        </div>
+      </div>
+
+      <div class="arch-card">
+        <div class="arch-info">
+          <h3 data-i18n="perf.arch.title">Native macOS Architecture</h3>
+          <p data-i18n="perf.arch.desc">
+            QuickMessage runs silently in the background with zero impact on system responsiveness or battery life, delivering instantaneous text expansion whenever you type.
+          </p>
+          <div class="arch-tech-tags">
+            <span class="tech-tag" data-i18n="perf.tag1">
+              Zero Background Lag
+            </span>
+            <span class="tech-tag" data-i18n="perf.tag2">
+              Ultra-Low Memory
+            </span>
+            <span class="tech-tag" data-i18n="perf.tag3">
+              Apple Silicon & Intel Ready
+            </span>
+          </div>
+        </div>
+
+        <div class="comparison-bars">
+          <div class="comp-item">
+            <div class="comp-meta">
+              <span data-i18n="perf.comp1.name">QuickMessage</span>
+              <strong style="color: var(--accent-cyan);">&lt; 20 MB RAM</strong>
+            </div>
+            <div class="comp-track">
+              <div class="comp-fill qm"></div>
+            </div>
+          </div>
+
+          <div class="comp-item">
+            <div class="comp-meta">
+              <span data-i18n="perf.comp2.name">Typical desktop text expanders</span>
+              <span>~250 - 450 MB RAM</span>
+            </div>
+            <div class="comp-track">
+              <div class="comp-fill electron"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Keyboard First & Manager App -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="feat.tag">BUILT FOR PRODUCTIVITY</span>
+        <h2 class="section-title" data-i18n="feat.title">Designed for Keyboard Lovers</h2>
+        <p class="section-desc" data-i18n="feat.desc">
+          Perform every action at lightning speed without lifting your hands from the keyboard.
+        </p>
+      </div>
+
+      <!-- Spotlight Style Search Preview -->
+      <div class="spotlight-preview-wrap">
+        <div class="spotlight-input-bar">
+          <div class="spotlight-icon">🔍</div>
+          <div class="spotlight-query" data-i18n="feat.spotlight.placeholder">Type \ to search snippets...</div>
+          <div class="spotlight-shortcut-hint">Fuzzy Search</div>
+        </div>
+        <ul class="spotlight-results-list">
+          <li class="spotlight-row active">
+            <span class="spotlight-keyword-badge">\bank</span>
+            <div class="spotlight-text-group">
+              <div class="spotlight-title">Bank Account Details</div>
+              <div class="spotlight-desc">Routing: 021000021 • Acc: 9876543210 • Alex Nguyen</div>
+            </div>
+            <span class="key-badge">↵ Insert</span>
+          </li>
+          <li class="spotlight-row">
+            <span class="spotlight-keyword-badge">\email</span>
+            <div class="spotlight-text-group">
+              <div class="spotlight-title">Partnership & Proposal Inquiry</div>
+              <div class="spotlight-desc">Hi team, thank you for reaching out to us...</div>
+            </div>
+          </li>
+          <li class="spotlight-row">
+            <span class="spotlight-keyword-badge">\sig</span>
+            <div class="spotlight-text-group">
+              <div class="spotlight-title">Corporate Email Signature</div>
+              <div class="spotlight-desc">Best regards — Alex Nguyen | Lead Engineer</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- App Manager Screenshot Display -->
+      <div class="manager-showcase-wrap" style="margin-top: 80px;">
+        <h3 data-i18n="feat.mgr.title" style="font-size: 26px; margin-bottom: 20px;">Refined Native macOS Manager</h3>
+        <p data-i18n="feat.mgr.desc" style="color: var(--text-secondary); margin-bottom: 32px;">
+          Effortlessly organize snippet categories, customize keywords, configure dynamic variables, and export JSON backups in seconds.
+        </p>
+        <div class="manager-img-container">
+          <img src="assets/app-preview.png" alt="QuickMessage Manager Native Interface" class="manager-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Real World Use Cases -->
+  <section id="usecases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="cases.tag">PRACTICAL USE CASES</span>
+        <h2 class="section-title" data-i18n="cases.title">Save Hours of Repetitive Typing</h2>
+        <p class="section-desc" data-i18n="cases.desc">Perfect for professionals who value speed, accuracy, and workflow efficiency.</p>
+      </div>
+
+      <div class="usecases-grid">
+        <div class="usecase-card">
+          <div class="usecase-header">
+            <div class="usecase-icon">🛒</div>
+            <div class="usecase-title" data-i18n="cases.c1.title">Sales & Customer Support</div>
+          </div>
+          <p class="usecase-desc" data-i18n="cases.c1.desc">
+            No more opening banking apps to copy account numbers, retyping shipping policies or store addresses. Send instantly in 1 second.
+          </p>
+          <div class="usecase-code-snippet">
+            <div class="snippet-trigger">
+              <span>Trigger: \bank</span>
+              <span class="key-badge">Auto Expand</span>
+            </div>
+            <div class="snippet-body">Bank: CHASE BANK N.A.
+Routing: 021000021 • Account: 9876543210
+Beneficiary: ALEX NGUYEN</div>
+          </div>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-header">
+            <div class="usecase-icon">💼</div>
+            <div class="usecase-title" data-i18n="cases.c2.title">Office, Recruiting & Management</div>
+          </div>
+          <p class="usecase-desc" data-i18n="cases.c2.desc">
+            Compose formal emails, send interview invites, weekly progress reports, and meeting summaries with dynamic autofill fields.
+          </p>
+          <div class="usecase-code-snippet">
+            <div class="snippet-trigger">
+              <span>Trigger: \interview</span>
+              <span class="key-badge">Variables</span>
+            </div>
+            <div class="snippet-body">Hi there, we would love to invite you for an interview for the Senior Engineer role tomorrow at 10:00 AM...</div>
+          </div>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-header">
+            <div class="usecase-icon">👨‍💻</div>
+            <div class="usecase-title" data-i18n="cases.c3.title">Developers & IT Support</div>
+          </div>
+          <p class="usecase-desc" data-i18n="cases.c3.desc">
+            Store complex docker commands, nginx configurations, standard conventional commits, cURL endpoints, and frequent SQL queries.
+          </p>
+          <div class="usecase-code-snippet">
+            <div class="snippet-trigger">
+              <span>Trigger: \docker</span>
+              <span class="key-badge">Terminal</span>
+            </div>
+            <div class="snippet-body">docker run --rm -it -v $(pwd):/app -p 8080:8080 app:latest npm start</div>
+          </div>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-header">
+            <div class="usecase-icon">🎓</div>
+            <div class="usecase-title" data-i18n="cases.c4.title">Freelancers & Creators</div>
+          </div>
+          <p class="usecase-desc" data-i18n="cases.c4.desc">
+            Instantly send service rates, social media links, portfolio URLs, invoice details, and standard contract agreements.
+          </p>
+          <div class="usecase-code-snippet">
+            <div class="snippet-trigger">
+              <span>Trigger: \tax</span>
+              <span class="key-badge">Instant</span>
+            </div>
+            <div class="snippet-body">Tax ID: 0312345678 • QUICKMESSAGE CORP
+Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="container faq-container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="faq.q1">How does QuickMessage work on macOS?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="faq.a1">
+            QuickMessage runs discreetly in the macOS Menu Bar. When you type the default prefix <code>\</code> followed by your configured shortcut, a lightweight overlay appears or instantly replaces your text directly at your cursor position.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="faq.q2">Why does the app require Accessibility permission?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="faq.a2">
+            macOS requires Accessibility permissions for all text expanders to detect global shortcut triggers across other apps and inject expanded text into your active window. QuickMessage processes 100% of keystroke matches locally and never logs or transmits any data.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="faq.q3">Does data sync across my Mac devices?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="faq.a3">
+            Yes! QuickMessage synchronizes snippets through your private Apple iCloud (CloudKit). Your data is encrypted and stored strictly in your own iCloud Private Database without any intermediate servers.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="faq.q4">Which Mac computers are supported?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="faq.a4">
+            QuickMessage runs natively on both Apple Silicon (M1, M2, M3, M4) and Intel Macs, fully supporting macOS 12 (Monterey), macOS 13 (Ventura), macOS 14 (Sonoma), and macOS 15 (Sequoia).
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="cta-title" data-i18n="cta.title">Ready to Accelerate Your Typing?</h2>
+        <p class="cta-desc" data-i18n="cta.desc">
+          Download QuickMessage and start saving hours of repetitive typing every week.
+        </p>
+
+        <div class="cta-buttons">
+          <button class="btn btn-primary btn-lg" onclick="handleDownload()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2.02.6-2.66 1.36-.58.68-1.09 1.76-0.96 2.79 1.01.08 2.06-.52 2.7-1.3"/>
+            </svg>
+            <span data-i18n="cta.btn">Download QuickMessage for Mac</span>
+          </button>
+        </div>
+
+        <div style="margin-top: 24px; font-size: 13px; color: var(--text-tertiary);" data-i18n="cta.sub">
+          Compatible with macOS 12+ • Apple Silicon & Intel • Instant setup
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <span>QuickMessage</span>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer.brand.desc">
+            Next-generation smart text expander for macOS. Boost productivity, eliminate repetitive typing, and keep your data 100% private.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4 data-i18n="footer.col1">Features</h4>
+            <ul>
+              <li><a href="#hero">Auto Expand</a></li>
+              <li><a href="#playground">Smart Suggestions</a></li>
+              <li><a href="#features">Global Search</a></li>
+              <li><a href="#sync">iCloud Sync</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer.col2">Security</h4>
+            <ul>
+              <li><a href="#privacy">Privacy-First</a></li>
+              <li><a href="#privacy">100% Local</a></li>
+              <li><a href="#privacy">Apple Keychain</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer.col3">Platform</h4>
+            <ul>
+              <li><a href="#performance">Apple Silicon (M1/M2/M3/M4)</a></li>
+              <li><a href="#performance">Intel Mac</a></li>
+              <li><a href="#performance">macOS Sonoma / Sequoia</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footer.cpr1">© 2026 QuickMessage for macOS. Designed with ❤️ for Mac enthusiasts.</div>
+        <div data-i18n="footer.cpr2">Zero tracking, zero ads, zero data collection.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
