@@ -1,0 +1,6 @@
+# Robots.txt for QuickMessage (https://www.qmessage.online/)
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.qmessage.online/sitemap.xml

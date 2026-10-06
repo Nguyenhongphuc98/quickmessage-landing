@@ -34,16 +34,16 @@ const translations = {
     'nav.faq': 'FAQ',
     'nav.download': 'Download for Mac',
 
-    'hero.badge': 'Next-generation native text expander for macOS',
-    'hero.title': 'Type Less.<br><span class="gradient-blue">Work Faster. Save Time.</span>',
+    'hero.badge': 'Engineered Exclusively for macOS',
+    'hero.title': 'Instant Text Expansion.<br><span class="gradient-blue">Engineered for macOS.</span>',
     'hero.desc': 'QuickMessage instantly expands shortcuts like <code class="trigger-highlight">\\bank</code>, <code class="trigger-highlight">\\email</code>, <code class="trigger-highlight">\\sig</code> into complete text in Telegram, Apple Mail, Slack, Notion, or any app you use.',
     'hero.btn.download': 'Download QuickMessage for Mac',
     'hero.btn.try': 'Try Live Interactive Demo',
 
-    'showcase.tab.chat': '💬 Chat (Bank Info)',
-    'showcase.tab.mail': '✉️ Mail (Auto Reply)',
-    'showcase.tab.sig': '✍️ Signature',
-    'showcase.tab.dev': '💻 Terminal / Dev',
+    'showcase.tab.chat': 'Chat (Bank Info)',
+    'showcase.tab.mail': 'Mail (Auto Reply)',
+    'showcase.tab.sig': 'Signature',
+    'showcase.tab.dev': 'Terminal / Dev',
     'showcase.replay': 'Replay',
     'showcase.pause': 'Pause',
     'showcase.resume': 'Resume',
@@ -113,8 +113,8 @@ const translations = {
     'cases.c3.desc': 'Store complex docker commands, nginx configurations, standard conventional commits, cURL endpoints, and frequent SQL queries.',
     'cases.c4.title': 'Freelancers & Creators',
     'cases.c4.desc': 'Instantly send service rates, social media links, portfolio URLs, invoice details, and standard contract agreements.',
-    'cases.c5.title': 'AI Prompts (ChatGPT & Claude)',
-    'cases.c5.desc': 'Store your master system prompts, code review personas, and translation templates. Trigger 200-word complex AI instructions with a single shortcut.',
+    'cases.c5.title': 'Complex Prompt Templates',
+    'cases.c5.desc': 'Store your master system prompts, code review personas, and translation templates. Trigger 200-word complex instructions with a single shortcut.',
 
     'faq.tag': 'FAQ',
     'faq.title': 'Frequently Asked Questions',
@@ -138,7 +138,7 @@ const translations = {
     'footer.col1': 'Features',
     'footer.col2': 'Security',
     'footer.col3': 'Platform',
-    'footer.cpr1': '© 2026 QuickMessage for macOS. Designed with ❤️ for Mac enthusiasts.',
+    'footer.cpr1': '© 2026 QuickMessage for macOS. Crafted for Mac enthusiasts.',
     'footer.cpr2': 'Zero tracking, zero ads, zero data collection.'
   },
   vi: {
@@ -153,16 +153,16 @@ const translations = {
     'nav.faq': 'Hỏi đáp',
     'nav.download': 'Tải cho macOS',
 
-    'hero.badge': 'Ứng dụng gõ tắt native thế hệ mới cho macOS 12+',
-    'hero.title': 'Gõ ít hơn.<br><span class="gradient-blue">Nhanh hơn và tiết kiệm thời gian.</span>',
+    'hero.badge': 'Ứng dụng bản địa dành riêng cho macOS',
+    'hero.title': 'Mở rộng văn bản tức thì.<br><span class="gradient-blue">Tối ưu hoá cho macOS.</span>',
     'hero.desc': 'QuickMessage biến các từ khoá viết tắt ngắn như <code class="trigger-highlight">\\bank</code>, <code class="trigger-highlight">\\email</code>, <code class="trigger-highlight">\\sig</code> thành đoạn văn bản hoàn chỉnh ngay trong Telegram, Apple Mail, Notion, Slack hoặc bất kỳ ứng dụng nào bạn đang dùng.',
     'hero.btn.download': 'Tải QuickMessage cho Mac',
     'hero.btn.try': 'Thử Nghiệm Trực Tiếp',
 
-    'showcase.tab.chat': '💬 Chat (STK Ngân hàng)',
-    'showcase.tab.mail': '✉️ Mail (Mẫu phản hồi)',
-    'showcase.tab.sig': '✍️ Chữ ký tức thì',
-    'showcase.tab.dev': '💻 Terminal / Dev',
+    'showcase.tab.chat': 'Chat (STK Ngân hàng)',
+    'showcase.tab.mail': 'Mail (Mẫu phản hồi)',
+    'showcase.tab.sig': 'Chữ ký tức thì',
+    'showcase.tab.dev': 'Terminal / Dev',
     'showcase.replay': 'Xem lại',
     'showcase.pause': 'Tạm dừng',
     'showcase.resume': 'Tiếp tục',
@@ -232,8 +232,8 @@ const translations = {
     'cases.c3.desc': 'Lưu các câu lệnh docker phức tạp, snippet cấu hình nginx, mẫu commit chuẩn conventional commit, cURL endpoint và SQL queries thường dùng.',
     'cases.c4.title': 'Freelancer & Sáng Tạo Nội Dung',
     'cases.c4.desc': 'Gửi báo giá dịch vụ, link mạng xã hội cá nhân, portfolio, thông tin xuất hóa đơn đỏ và điều khoản hợp đồng tức thì cho đối tác.',
-    'cases.c5.title': 'Soạn Prompt AI (ChatGPT & Claude)',
-    'cases.c5.desc': 'Lưu trữ toàn bộ kho prompt mẫu cho ChatGPT, Claude và Gemini. Không còn phải gõ đi gõ lại những đoạn prompt dài hàng trăm chữ mỗi ngày.',
+    'cases.c5.title': 'Mẫu Văn Bản & Prompt Dài',
+    'cases.c5.desc': 'Lưu trữ các câu lệnh prompt chi tiết, persona đánh giá code hoặc mẫu dịch thuật. Kích hoạt văn bản hướng dẫn dài hàng trăm chữ chỉ bằng một từ khoá.',
 
     'faq.tag': 'HỎI ĐÁP',
     'faq.title': 'Câu Hỏi Thường Gặp',
@@ -414,7 +414,7 @@ const heroScenariosI18n = {
     email: {
       appName: 'Apple Mail',
       appSubtitle: 'New Message to Partner',
-      avatar: '✉️',
+      avatar: 'AM',
       avatarGradient: 'linear-gradient(135deg, #0a84ff, #5ac8fa)',
       incomingMsg: 'Hi there, we loved your product demo. Could you email us the pricing breakdown?',
       triggerInput: '\\reply',
@@ -441,7 +441,7 @@ const heroScenariosI18n = {
     signature: {
       appName: 'Slack / Notes',
       appSubtitle: 'Work Channel #general',
-      avatar: '📝',
+      avatar: 'SL',
       avatarGradient: 'linear-gradient(135deg, #ff9f0a, #ffd60a)',
       incomingMsg: 'Please add your signature and contact details below.',
       triggerInput: '\\sig',
@@ -462,7 +462,7 @@ const heroScenariosI18n = {
     coding: {
       appName: 'Terminal / zsh',
       appSubtitle: 'macOS Developer Shell',
-      avatar: '💻',
+      avatar: 'TR',
       avatarGradient: 'linear-gradient(135deg, #30d158, #0a84ff)',
       incomingMsg: '$ # Testing cloud sync and local deployment...',
       triggerInput: '\\curl',
@@ -512,7 +512,7 @@ const heroScenariosI18n = {
     email: {
       appName: 'Apple Mail',
       appSubtitle: 'Thư mới tới Đối tác & Khách hàng',
-      avatar: '✉️',
+      avatar: 'AM',
       avatarGradient: 'linear-gradient(135deg, #0a84ff, #5ac8fa)',
       incomingMsg: 'Chào bạn, công ty mình đang tìm hiểu giải pháp này, có thể gửi thông tin chi tiết qua email không?',
       triggerInput: '\\reply',
@@ -533,7 +533,7 @@ const heroScenariosI18n = {
     signature: {
       appName: 'Notes / Slack',
       appSubtitle: 'Soạn thảo văn bản & Chữ ký',
-      avatar: '📝',
+      avatar: 'SL',
       avatarGradient: 'linear-gradient(135deg, #ff9f0a, #ffd60a)',
       incomingMsg: 'Anh ký xác nhận rồi gửi kèm thông tin liên hệ giúp em với nhé.',
       triggerInput: '\\sig',
@@ -554,7 +554,7 @@ const heroScenariosI18n = {
     coding: {
       appName: 'Terminal / zsh',
       appSubtitle: 'macOS Developer Shell',
-      avatar: '💻',
+      avatar: 'TR',
       avatarGradient: 'linear-gradient(135deg, #30d158, #0a84ff)',
       incomingMsg: '$ # Kiểm tra API endpoint và kiểm thử CloudKit Sync...',
       triggerInput: '\\curl',
@@ -630,7 +630,9 @@ function updatePlayPauseButton() {
   const togglePlayBtn = document.getElementById('heroTogglePlayBtn');
   if (!togglePlayBtn) return;
   const t = translations[currentLang];
-  togglePlayBtn.textContent = isAutoPlaying ? `⏸ ${t['showcase.pause']}` : `▶️ ${t['showcase.resume']}`;
+  togglePlayBtn.innerHTML = isAutoPlaying 
+    ? `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="4" height="16" rx="1"/><rect x="15" y="4" width="4" height="16" rx="1"/></svg> <span>${t['showcase.pause']}</span>`
+    : `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg> <span>${t['showcase.resume']}</span>`;
 }
 
 function playScenario(scenarioKey) {

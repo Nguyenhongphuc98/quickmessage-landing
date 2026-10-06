@@ -13,6 +13,9 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#121214">
   <link rel="canonical" href="https://www.qmessage.online/">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="128x128" href="assets/apple-touch-icon.png">
 
   <!-- Open Graph / Facebook / LinkedIn / Zalo -->
   <meta property="og:type" content="website">
@@ -20,7 +23,7 @@
   <meta property="og:site_name" content="QuickMessage">
   <meta property="og:title" content="QuickMessage — Native Text Expander for macOS">
   <meta property="og:description" content="Type less, work faster, and save time. Native text expander for macOS with 100% private local processing and encrypted Apple iCloud sync.">
-  <meta property="og:image" content="assets/app-preview.png">
+  <meta property="og:image" content="https://www.qmessage.online/assets/app-preview.png">
   <meta property="og:image:alt" content="QuickMessage macOS Manager Interface">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="vi_VN">
@@ -30,14 +33,16 @@
   <meta name="twitter:url" content="https://www.qmessage.online/">
   <meta name="twitter:title" content="QuickMessage — Native Text Expander for macOS">
   <meta name="twitter:description" content="Type less, work faster, and save time. Native text expander for macOS with 100% private local processing and encrypted Apple iCloud sync.">
-  <meta name="twitter:image" content="assets/app-preview.png">
+  <meta name="twitter:image" content="https://www.qmessage.online/assets/app-preview.png">
 
-  <!-- Structured Data (JSON-LD) for Search Engines -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "QuickMessage",
+    "url": "https://www.qmessage.online/",
+    "image": "https://www.qmessage.online/assets/app-preview.png",
+    "screenshot": "https://www.qmessage.online/assets/app-preview.png",
     "operatingSystem": "macOS 12.0 or later",
     "applicationCategory": "ProductivityApplication",
     "downloadUrl": "https://apps.apple.com/us/app/quickmessage-text-expander/id6818796098",
@@ -114,14 +119,16 @@
     <div class="container hero-content">
       <div class="hero-badge-wrap">
         <div class="badge">
-          <span class="badge-dot"></span>
-          <span data-i18n="hero.badge">Next-generation native text expander for macOS</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2.02.6-2.66 1.36-.58.68-1.09 1.76-0.96 2.79 1.01.08 2.06-.52 2.7-1.3"/>
+          </svg>
+          <span data-i18n="hero.badge">Engineered Exclusively for macOS</span>
         </div>
       </div>
 
       <h1 class="hero-title" data-i18n="hero.title">
-        Type Less. <br>
-        <span class="gradient-blue">Work Faster. Save Time.</span>
+        Instant Text Expansion. <br>
+        <span class="gradient-blue">Engineered for macOS.</span>
       </h1>
 
       <p class="hero-description" data-i18n="hero.desc">
@@ -161,16 +168,31 @@
           <!-- Scenario Switcher Tabs -->
           <div class="showcase-tabs">
             <button class="showcase-tab active" data-scenario="chat">
-              <span data-i18n="showcase.tab.chat">💬 Chat (Bank Info)</span>
+              <svg class="tab-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              <span data-i18n="showcase.tab.chat">Chat (Bank Info)</span>
             </button>
             <button class="showcase-tab" data-scenario="email">
-              <span data-i18n="showcase.tab.mail">✉️ Mail (Auto Reply)</span>
+              <svg class="tab-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <span data-i18n="showcase.tab.mail">Mail (Auto Reply)</span>
             </button>
             <button class="showcase-tab" data-scenario="signature">
-              <span data-i18n="showcase.tab.sig">✍️ Signature</span>
+              <svg class="tab-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
+                <path d="m15 5 4 4"/>
+              </svg>
+              <span data-i18n="showcase.tab.sig">Signature</span>
             </button>
             <button class="showcase-tab" data-scenario="coding">
-              <span data-i18n="showcase.tab.dev">💻 Terminal / Dev</span>
+              <svg class="tab-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"/>
+                <line x1="12" y1="19" x2="20" y2="19"/>
+              </svg>
+              <span data-i18n="showcase.tab.dev">Terminal / Dev</span>
             </button>
           </div>
 
@@ -246,7 +268,8 @@
               <span data-i18n="showcase.replay">Replay</span>
             </button>
             <button class="demo-action-btn" id="heroTogglePlayBtn">
-              <span data-i18n="showcase.pause">⏸ Pause</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="4" height="16" rx="1"/><rect x="15" y="4" width="4" height="16" rx="1"/></svg>
+              <span data-i18n="showcase.pause">Pause</span>
             </button>
           </div>
         </div>
@@ -411,7 +434,12 @@
 
         <div class="sync-devices-row">
           <div class="device-card">
-            <div class="device-icon">💻</div>
+            <div class="device-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="12" rx="2"/>
+                <line x1="2" y1="20" x2="22" y2="20"/>
+              </svg>
+            </div>
             <div class="device-name">MacBook Pro</div>
             <div class="device-status">
               <span class="device-status-dot"></span>
@@ -420,7 +448,11 @@
           </div>
 
           <div class="device-card">
-            <div class="device-icon">☁️</div>
+            <div class="device-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+              </svg>
+            </div>
             <div class="device-name">iCloud CloudKit</div>
             <div class="device-status">
               <span class="device-status-dot"></span>
@@ -429,7 +461,13 @@
           </div>
 
           <div class="device-card">
-            <div class="device-icon">🖥️</div>
+            <div class="device-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
             <div class="device-name">iMac Studio</div>
             <div class="device-status">
               <span class="device-status-dot"></span>
@@ -536,7 +574,12 @@
       <!-- Spotlight Style Search Preview -->
       <div class="spotlight-preview-wrap">
         <div class="spotlight-input-bar">
-          <div class="spotlight-icon">🔍</div>
+          <div class="spotlight-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
           <div class="spotlight-query" data-i18n="feat.spotlight.placeholder">Type \ to search snippets...</div>
           <div class="spotlight-shortcut-hint">Fuzzy Search</div>
         </div>
@@ -591,7 +634,12 @@
       <div class="usecases-grid">
         <div class="usecase-card">
           <div class="usecase-header">
-            <div class="usecase-icon">🛒</div>
+            <div class="usecase-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
+            </div>
             <div class="usecase-title" data-i18n="cases.c1.title">Sales & Customer Support</div>
           </div>
           <p class="usecase-desc" data-i18n="cases.c1.desc">
@@ -610,7 +658,12 @@ Beneficiary: ALEX NGUYEN</div>
 
         <div class="usecase-card">
           <div class="usecase-header">
-            <div class="usecase-icon">💼</div>
+            <div class="usecase-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
             <div class="usecase-title" data-i18n="cases.c2.title">Office, Recruiting & Management</div>
           </div>
           <p class="usecase-desc" data-i18n="cases.c2.desc">
@@ -627,7 +680,12 @@ Beneficiary: ALEX NGUYEN</div>
 
         <div class="usecase-card">
           <div class="usecase-header">
-            <div class="usecase-icon">👨‍💻</div>
+            <div class="usecase-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
             <div class="usecase-title" data-i18n="cases.c3.title">Developers & IT Support</div>
           </div>
           <p class="usecase-desc" data-i18n="cases.c3.desc">
@@ -644,7 +702,14 @@ Beneficiary: ALEX NGUYEN</div>
 
         <div class="usecase-card">
           <div class="usecase-header">
-            <div class="usecase-icon">🎓</div>
+            <div class="usecase-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
             <div class="usecase-title" data-i18n="cases.c4.title">Freelancers & Creators</div>
           </div>
           <p class="usecase-desc" data-i18n="cases.c4.desc">
@@ -660,18 +725,22 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
           </div>
         </div>
 
-        <div class="usecase-card featured">
+        <div class="usecase-card">
           <div class="usecase-header">
-            <div class="usecase-icon">🤖</div>
-            <div class="usecase-title" data-i18n="cases.c5.title">AI Prompts (ChatGPT & Claude)</div>
+            <div class="usecase-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+              </svg>
+            </div>
+            <div class="usecase-title" data-i18n="cases.c5.title">Complex Prompt Templates</div>
           </div>
           <p class="usecase-desc" data-i18n="cases.c5.desc">
-            Store your master system prompts, code review personas, and translation templates. Trigger 200-word complex AI instructions with a single shortcut.
+            Store your master system prompts, code review personas, and translation templates. Trigger 200-word complex instructions with a single shortcut.
           </p>
           <div class="usecase-code-snippet">
             <div class="snippet-trigger">
               <span>Trigger: \gpt</span>
-              <span class="key-badge">AI Assistant</span>
+              <span class="key-badge">Template</span>
             </div>
             <div class="snippet-body">Act as a senior software architect. Analyze the following code for edge cases, performance bottlenecks, and security flaws:</div>
           </div>
@@ -825,7 +894,7 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
       </div>
 
       <div class="footer-bottom">
-        <div data-i18n="footer.cpr1">© 2026 QuickMessage for macOS. Designed with ❤️ for Mac enthusiasts.</div>
+        <div data-i18n="footer.cpr1">© 2026 QuickMessage for macOS. Crafted for Mac enthusiasts.</div>
         <div data-i18n="footer.cpr2">Zero tracking, zero ads, zero data collection.</div>
       </div>
     </div>
