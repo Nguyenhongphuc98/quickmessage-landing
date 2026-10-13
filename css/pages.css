@@ -1,0 +1,45 @@
+/* Shared styles for the static Support / Privacy pages. Builds on style.css variables. */
+.doc-page { min-height: 100vh; display: flex; flex-direction: column; }
+.doc-header {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  max-width: 880px; width: 100%; margin: 0 auto; padding: 24px;
+}
+.doc-brand { color: var(--text-primary); font-weight: 700; font-size: 18px; text-decoration: none; }
+.doc-nav { display: flex; align-items: center; gap: 18px; font-size: 14px; }
+.doc-nav a { color: var(--text-secondary); text-decoration: none; }
+.doc-nav a:hover, .doc-nav a[aria-current="page"] { color: var(--text-primary); }
+.doc-lang {
+  font: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+  color: var(--text-secondary); background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 6px; padding: 3px 8px;
+}
+html[data-lang="en"] .doc-lang[data-set-lang="en"],
+html[data-lang="vi"] .doc-lang[data-set-lang="vi"] { color: var(--text-primary); background: rgba(255, 255, 255, 0.1); }
+.doc-main { flex: 1; max-width: 880px; width: 100%; margin: 0 auto; padding: 8px 24px 48px; }
+.doc-main h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.15; margin-bottom: 12px; }
+.doc-lead { color: var(--text-secondary); margin-bottom: 28px; }
+.doc-card {
+  background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px; padding: 22px 24px; margin-bottom: 18px;
+}
+.doc-card h2 { font-size: 20px; margin-bottom: 10px; }
+.doc-card p { color: var(--text-secondary); margin-bottom: 10px; }
+.doc-card p:last-child { margin-bottom: 0; }
+.doc-card a { color: var(--accent-blue); }
+.doc-card code {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 0.92em;
+  background: rgba(255, 255, 255, 0.08); border-radius: 5px; padding: 1px 6px; color: var(--text-primary);
+}
+.doc-card details { border-top: 1px solid rgba(255, 255, 255, 0.07); padding: 12px 0; }
+.doc-card details:first-of-type { border-top: 0; }
+.doc-card summary { cursor: pointer; font-weight: 600; color: var(--text-primary); }
+.doc-card details p { margin-top: 10px; }
+.doc-footer {
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  max-width: 880px; width: 100%; margin: 0 auto; padding: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 13px; color: var(--text-tertiary);
+}
+.doc-footer a { color: var(--text-secondary); text-decoration: none; }
+
+/* Language switching: only the active language is shown. */
+html[data-lang="en"] .vi, html[data-lang="vi"] .en { display: none; }

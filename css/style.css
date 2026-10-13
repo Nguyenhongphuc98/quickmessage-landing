@@ -1744,6 +1744,14 @@ section {
   font-size: 13px;
 }
 
+.footer-legal {
+  display: flex;
+  gap: 18px;
+}
+.footer-legal a:hover {
+  color: var(--text-primary);
+}
+
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */

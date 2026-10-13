@@ -43,7 +43,7 @@
     "url": "https://www.qmessage.online/",
     "image": "https://www.qmessage.online/assets/app-preview.png",
     "screenshot": "https://www.qmessage.online/assets/app-preview.png",
-    "operatingSystem": "macOS 12.0 or later",
+    "operatingSystem": "macOS 13.0 or later",
     "applicationCategory": "ProductivityApplication",
     "downloadUrl": "https://apps.apple.com/us/app/quickmessage-text-expander/id6818796098",
     "installUrl": "https://apps.apple.com/us/app/quickmessage-text-expander/id6818796098",
@@ -61,7 +61,7 @@
       "Ultra-lightweight memory footprint under 20MB",
       "Zero background idle CPU usage",
       "Instant fuzzy search popup with prefix \\",
-      "Universal Binary for Apple Silicon and Intel Macs"
+      "Native build for Apple Silicon Macs"
     ]
   }
   </script>
@@ -341,7 +341,7 @@
           <span class="section-tag" style="color: var(--accent-green);" data-i18n="privacy.tag">ABSOLUTE PRIVACY & SECURITY</span>
           <h2 class="section-title" data-i18n="privacy.title">"Your data never leaves your device."</h2>
           <p class="section-desc" data-i18n="privacy.desc">
-            QuickMessage is designed privacy-first from the ground up. No tracking servers, no cloud keystroke logging, and zero content telemetry.
+            QuickMessage is designed privacy-first from the ground up. No cloud keystroke logging and no collection of what you type.
           </p>
         </div>
 
@@ -355,7 +355,7 @@
             </div>
             <h3 class="privacy-card-title" data-i18n="privacy.card1.title">100% Local Processing</h3>
             <p class="privacy-card-desc" data-i18n="privacy.card1.desc">
-              All shortcut expansions are processed entirely in memory on your Mac. Everything runs 100% offline with zero external network requests.
+              All shortcut expansions are processed entirely in memory on your Mac. What you type is never sent anywhere.
             </p>
           </div>
 
@@ -366,9 +366,9 @@
                 <line x1="1" y1="1" x2="23" y2="23"/>
               </svg>
             </div>
-            <h3 class="privacy-card-title" data-i18n="privacy.card2.title">Zero Data Collection</h3>
+            <h3 class="privacy-card-title" data-i18n="privacy.card2.title">No Typing Data Collected</h3>
             <p class="privacy-card-desc" data-i18n="privacy.card2.desc">
-              Zero telemetry. The app never records keystrokes (no keylogging), does not track typing behavior, and contains no third-party tracking SDKs.
+              The app never records or sends keystrokes or snippet text, and it does not collect usage analytics.
             </p>
           </div>
 
@@ -512,7 +512,7 @@
         <div class="metric-card">
           <div class="metric-number gradient-blue">100%</div>
           <div class="metric-label" data-i18n="perf.m4.lbl">Native Architecture</div>
-          <div class="metric-sub" data-i18n="perf.m4.sub">Designed exclusively for macOS Sonoma, Sequoia & Apple Silicon / Intel.</div>
+          <div class="metric-sub" data-i18n="perf.m4.sub">Built natively for Apple Silicon Macs running macOS 13 or later.</div>
         </div>
       </div>
 
@@ -530,7 +530,7 @@
               Ultra-Low Memory
             </span>
             <span class="tech-tag" data-i18n="perf.tag3">
-              Apple Silicon & Intel Ready
+              Apple Silicon Ready
             </span>
           </div>
         </div>
@@ -764,7 +764,7 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner" data-i18n="faq.a1">
-            QuickMessage runs discreetly in the macOS Menu Bar. When you type the default prefix <code>\</code> followed by your configured shortcut, a lightweight overlay appears or instantly replaces your text directly at your cursor position.
+            QuickMessage runs discreetly in the macOS Menu Bar. When you type the default prefix <code>\</code> followed by your configured shortcut, a lightweight suggestion list appears, or your text is replaced in place.
           </div>
         </div>
       </div>
@@ -776,7 +776,7 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner" data-i18n="faq.a2">
-            macOS requires Accessibility permissions for all text expanders to detect global shortcut triggers across other apps and inject expanded text into your active window. QuickMessage processes 100% of keystroke matches locally and never logs or transmits any data.
+            Automatic expansion in other apps needs the optional macOS Accessibility permission, which lets QuickMessage notice the shortcut you type and insert the snippet into your active window. Without it you can still manage and sync snippets. Keystroke matching happens locally; keystrokes are never stored or sent.
           </div>
         </div>
       </div>
@@ -800,7 +800,7 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner" data-i18n="faq.a4">
-            QuickMessage runs natively on both Apple Silicon (M1, M2, M3, M4) and Intel Macs, fully supporting macOS 12 (Monterey), macOS 13 (Ventura), macOS 14 (Sonoma), and macOS 15 (Sequoia).
+            QuickMessage runs natively on Apple Silicon Macs (M1 and later) with macOS 13 (Ventura) or later.
           </div>
         </div>
       </div>
@@ -838,7 +838,7 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
         </div>
 
         <div style="margin-top: 24px; font-size: 13px; color: var(--text-tertiary);" data-i18n="cta.sub">
-          Compatible with macOS 12+ • Apple Silicon & Intel • Instant setup
+          Requires macOS 13+ • Apple Silicon • Instant setup
         </div>
       </div>
     </div>
@@ -886,8 +886,7 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
             <h4 data-i18n="footer.col3">Platform</h4>
             <ul>
               <li><a href="#performance">Apple Silicon (M1/M2/M3/M4)</a></li>
-              <li><a href="#performance">Intel Mac</a></li>
-              <li><a href="#performance">macOS Sonoma / Sequoia</a></li>
+                            <li><a href="#performance">macOS Sonoma / Sequoia</a></li>
             </ul>
           </div>
         </div>
@@ -895,7 +894,11 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
 
       <div class="footer-bottom">
         <div data-i18n="footer.cpr1">© 2026 QuickMessage for macOS. Crafted for Mac enthusiasts.</div>
-        <div data-i18n="footer.cpr2">Zero tracking, zero ads, zero data collection.</div>
+        <div class="footer-legal">
+          <a href="/support" data-i18n="footer.support">Support</a>
+          <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a>
+        </div>
+        <div data-i18n="footer.cpr2">No ads. We never collect what you type.</div>
       </div>
     </div>
   </footer>
