@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroDemo();
   initPlayground();
   initFaqAccordion();
+  initDownloadLinks();
 });
 
 /* ==========================================================================
@@ -123,7 +124,7 @@ const translations = {
     'faq.q_diff': 'How does QuickMessage compare to TextExpander or aText?',
     'faq.a_diff': 'QuickMessage is engineered natively in Rust and Swift specifically for Apple Silicon, consuming under 20MB of RAM (over 90% lighter than Electron apps). Unlike subscription-based expanders like TextExpander, QuickMessage has no recurring fees and syncs end-to-end encrypted snippets exclusively through your personal Apple iCloud (CloudKit) without any third-party cloud servers.',
     'faq.q_price': 'Is QuickMessage free to use?',
-    'faq.a_price': 'Yes, QuickMessage is free to download on the Mac App Store. You get instant keystroke expansion, local encryption via Apple Keychain, and secure personal iCloud synchronization with zero subscriptions or intrusive ads.',
+    'faq.a_price': 'Yes, QuickMessage is free to download for macOS. You get instant keystroke expansion, local encryption via Apple Keychain, and secure personal iCloud synchronization with zero subscriptions or intrusive ads.',
     'faq.q2': 'Why does the app require Accessibility permission?',
     'faq.a2': 'Automatic expansion in other apps needs the optional macOS Accessibility permission, which lets QuickMessage notice the shortcut you type and insert the snippet into your active window. Without it you can still manage and sync snippets. Keystroke matching happens locally; keystrokes are never stored or sent.',
     'faq.q3': 'Does data sync across my Mac devices?',
@@ -135,7 +136,7 @@ const translations = {
 
     'cta.title': 'Ready to Accelerate Your Typing?',
     'cta.desc': 'Download QuickMessage and start saving hours of repetitive typing every week.',
-    'cta.btn': 'Download on the Mac App Store',
+    'cta.btn': 'Download QuickMessage for Mac (.dmg)',
     'cta.sub': 'Requires macOS 13+ • Apple Silicon',
 
     'footer.brand.desc': 'Next-generation smart text expander for macOS. Boost productivity, eliminate repetitive typing, and keep your data 100% private.',
@@ -162,7 +163,7 @@ const translations = {
     'hero.badge': 'Ứng dụng bản địa dành riêng cho macOS',
     'hero.title': 'Mở rộng văn bản tức thì.<br><span class="gradient-blue">Tối ưu hoá cho macOS.</span>',
     'hero.desc': 'QuickMessage biến các từ khoá viết tắt ngắn như <code class="trigger-highlight">\\bank</code>, <code class="trigger-highlight">\\email</code>, <code class="trigger-highlight">\\sig</code> thành đoạn văn bản hoàn chỉnh ngay trong Telegram, Apple Mail, Notion, Slack hoặc bất kỳ ứng dụng nào bạn đang dùng.',
-    'hero.btn.download': 'Tải QuickMessage cho Mac',
+    'hero.btn.download': 'Tải QuickMessage cho Mac (.dmg)',
     'hero.btn.try': 'Thử Nghiệm Trực Tiếp',
 
     'showcase.tab.chat': 'Chat (STK Ngân hàng)',
@@ -248,7 +249,7 @@ const translations = {
     'faq.q_diff': 'QuickMessage khác gì so với TextExpander hay aText?',
     'faq.a_diff': 'QuickMessage được phát triển hoàn toàn bằng Rust và Swift tối ưu riêng cho Apple Silicon, chỉ chiếm dưới 20MB RAM (tiết kiệm hơn 90% so với các ứng dụng nền tảng Electron). Thay vì phải trả phí thuê bao đắt đỏ như TextExpander, QuickMessage không thu phí định kỳ và đồng bộ mã hoá đầu cuối thông qua tài khoản Apple iCloud cá nhân mà không qua bất kỳ máy chủ bên thứ ba nào.',
     'faq.q_price': 'QuickMessage có miễn phí không?',
-    'faq.a_price': 'Có! QuickMessage hoàn toàn miễn phí tải về trên Mac App Store. Bạn có thể sử dụng đầy đủ các tính năng gõ tắt tức thì, mã hoá bảo mật với Apple Keychain và đồng bộ iCloud cá nhân mà không có quảng cáo hay gói thuê bao ẩn.',
+    'faq.a_price': 'Có! QuickMessage hoàn toàn miễn phí tải về cho macOS. Bạn có thể sử dụng đầy đủ các tính năng gõ tắt tức thì, mã hoá bảo mật với Apple Keychain và đồng bộ iCloud cá nhân mà không có quảng cáo hay gói thuê bao ẩn.',
     'faq.q2': 'Tại sao ứng dụng cần cấp quyền Accessibility (Trợ năng)?',
     'faq.a2': 'Tự động thay thế trong app khác cần quyền Accessibility (Trợ năng) của macOS, không bắt buộc, để QuickMessage nhận ra từ khoá bạn gõ và chèn snippet vào ứng dụng đang dùng. Khi chưa cấp quyền, bạn vẫn quản lý và đồng bộ snippet bình thường. QuickMessage cam kết 100% dữ liệu phím chỉ được đối chiếu cục bộ trên máy và không bao giờ lưu trữ hay truyền đi bất kỳ đâu.',
     'faq.q3': 'Dữ liệu có được đồng bộ giữa các máy Mac không?',
@@ -260,7 +261,7 @@ const translations = {
 
     'cta.title': 'Sẵn Sàng Tăng Tốc Độ Gõ Phím Của Bạn?',
     'cta.desc': 'Tải QuickMessage và bắt đầu tiết kiệm hàng giờ gõ các đoạn văn bản lặp lại mỗi tuần ngay từ hôm nay.',
-    'cta.btn': 'Tải trên Mac App Store',
+    'cta.btn': 'Tải QuickMessage cho Mac (.dmg)',
     'cta.sub': 'Yêu cầu macOS 13+ • Apple Silicon',
 
     'footer.brand.desc': 'Ứng dụng gõ tắt thông minh hàng đầu cho macOS. Tối ưu hoá năng suất, tiết kiệm thời gian và đảm bảo an toàn dữ liệu tuyệt đối.',
@@ -1009,10 +1010,36 @@ function initFaqAccordion() {
 /* ==========================================================================
    6. Global Actions & Helpers
    ========================================================================== */
-const MAC_APP_STORE_URL = 'https://apps.apple.com/us/app/quickmessage-text-expander/id6818796098';
+const GITHUB_RELEASE_REPO = 'Nguyenhongphuc98/QuickMessage-Release';
+let DMG_DOWNLOAD_URL = `https://github.com/${GITHUB_RELEASE_REPO}/releases/latest/download/QuickMessage.dmg`;
+
+function initDownloadLinks() {
+  const links = document.querySelectorAll('[data-download-dmg]');
+  links.forEach(link => {
+    link.href = DMG_DOWNLOAD_URL;
+  });
+
+  fetch(`https://api.github.com/repos/${GITHUB_RELEASE_REPO}/releases/latest`, {
+    headers: { 'Accept': 'application/vnd.github+json' }
+  })
+    .then(res => (res.ok ? res.json() : null))
+    .then(data => {
+      if (!data || !Array.isArray(data.assets)) return;
+      const dmgAsset =
+        data.assets.find(a => typeof a.name === 'string' && a.name.toLowerCase().endsWith('-macos-arm64.dmg')) ||
+        data.assets.find(a => typeof a.name === 'string' && a.name.toLowerCase().endsWith('.dmg'));
+      if (dmgAsset && dmgAsset.browser_download_url) {
+        DMG_DOWNLOAD_URL = dmgAsset.browser_download_url;
+        links.forEach(link => {
+          link.href = DMG_DOWNLOAD_URL;
+        });
+      }
+    })
+    .catch(() => {});
+}
 
 function handleDownload() {
-  window.open(MAC_APP_STORE_URL, '_blank', 'noopener,noreferrer');
+  window.location.href = DMG_DOWNLOAD_URL;
 }
 
 function escapeHtml(str) {

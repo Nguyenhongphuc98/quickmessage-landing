@@ -34,12 +34,12 @@ Unlike traditional text expanders built with web wrappers or Electron, QuickMess
 - **vs Alfred Snippets**: QuickMessage provides a dedicated standalone Menu Bar tool with real-time popup suggestions (`\`) without requiring Alfred Powerpack purchase or complex workflow configurations.
 
 ## Pricing & Availability
-- **Pricing**: Free to download on the Mac App Store.
+- **Pricing**: Free to download for macOS (.dmg installer).
 - **Platform**: macOS 13.0 (Ventura) or later.
 - **Hardware**: Apple Silicon Macs (M1/M2/M3/M4 or newer).
 
 ## Important Links
 - **Official Website**: https://www.qmessage.online/
-- **Mac App Store**: https://apps.apple.com/us/app/quickmessage-text-expander/id6818796098
+- **Direct Download (.dmg)**: https://github.com/Nguyenhongphuc98/QuickMessage-Release/releases/latest/download/QuickMessage.dmg
 - **Support**: https://www.qmessage.online/support
 - **Privacy Policy**: https://www.qmessage.online/privacy
