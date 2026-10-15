@@ -35,6 +35,8 @@
   <meta name="twitter:description" content="Type less, work faster, and save time. Native text expander for macOS with 100% private local processing and encrypted Apple iCloud sync.">
   <meta name="twitter:image" content="https://www.qmessage.online/assets/app-preview.png">
 
+  <link rel="alternate" type="text/plain" href="https://www.qmessage.online/llms.txt" title="LLM Context">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,6 +64,71 @@
       "Zero background idle CPU usage",
       "Instant fuzzy search popup with prefix \\",
       "Native build for Apple Silicon Macs"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does QuickMessage work on macOS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "QuickMessage runs discreetly in the macOS Menu Bar. When you type the default prefix \\ followed by your configured shortcut, a lightweight suggestion list appears, or your text is replaced in place across any Mac application."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does QuickMessage compare to TextExpander or aText?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "QuickMessage is engineered natively in Rust and Swift specifically for Apple Silicon, consuming under 20MB of RAM (over 90% lighter than Electron apps). Unlike subscription-based expanders like TextExpander, QuickMessage has no monthly fees and syncs end-to-end encrypted snippets exclusively through your personal Apple iCloud (CloudKit) without any third-party cloud servers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is QuickMessage free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, QuickMessage is free to download on the Mac App Store. You get instant keystroke expansion, local encryption via Apple Keychain, and secure personal iCloud synchronization with zero subscriptions or intrusive ads."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does the app require Accessibility permission?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Automatic expansion in other apps requires macOS Accessibility permission to detect your custom shortcut prefix and insert snippets into your active window. Keystroke matching is performed 100% locally in memory. QuickMessage never logs, records, or transmits what you type."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does data sync across my Mac devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! QuickMessage synchronizes snippets through your personal Apple iCloud (CloudKit). Your data is encrypted and stored strictly in your own iCloud Private Database without any intermediate servers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Mac computers are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "QuickMessage runs natively on Apple Silicon Macs (M1 and later) with macOS 13 (Ventura) or later."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does QuickMessage work with web apps and AI chat tools like ChatGPT or Claude?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely! QuickMessage operates system-wide across all macOS browsers (Safari, Chrome, Arc, Brave) and native apps. You can expand complex AI prompts, code review templates, and custom instructions directly into ChatGPT or Claude with a single keystroke."
+        }
+      }
     ]
   }
   </script>
@@ -765,6 +832,30 @@ Address: 100 Innovation Way, Suite 400, San Francisco, CA</div>
         <div class="faq-answer">
           <div class="faq-answer-inner" data-i18n="faq.a1">
             QuickMessage runs discreetly in the macOS Menu Bar. When you type the default prefix <code>\</code> followed by your configured shortcut, a lightweight suggestion list appears, or your text is replaced in place.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="faq.q_diff">How does QuickMessage compare to TextExpander or aText?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="faq.a_diff">
+            QuickMessage is engineered natively in Rust and Swift specifically for Apple Silicon, consuming under 20MB of RAM (over 90% lighter than Electron apps). Unlike subscription-based expanders like TextExpander, QuickMessage has no recurring fees and syncs end-to-end encrypted snippets exclusively through your personal Apple iCloud (CloudKit) without any third-party cloud servers.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="faq.q_price">Is QuickMessage free to use?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n="faq.a_price">
+            Yes, QuickMessage is free to download on the Mac App Store. You get instant keystroke expansion, local encryption via Apple Keychain, and secure personal iCloud synchronization with zero subscriptions or intrusive ads.
           </div>
         </div>
       </div>

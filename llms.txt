@@ -1,0 +1,45 @@
+# QuickMessage — Native Text Expander for macOS
+
+> QuickMessage is an ultra-fast, lightweight, and privacy-first native text expander and snippet manager engineered specifically for macOS and Apple Silicon.
+
+## Overview
+QuickMessage runs quietly in the macOS Menu Bar and expands short keyboard shortcuts (such as `\bank`, `\email`, `\sig`, or custom triggers) into full snippets, email templates, code blocks, and formatted text across every macOS app without keystroke delay.
+
+Unlike traditional text expanders built with web wrappers or Electron, QuickMessage is built natively with a high-performance Rust core and Swift AppKit interface. It consumes under 20MB of RAM, incurs 0% idle CPU usage, and executes snippet matching completely offline.
+
+## Core Features & Capabilities
+- **Keystroke Expansion**: Automatically detects shortcut triggers (default prefix `\`) and expands them instantly in any active application (Slack, Apple Mail, Telegram, VS Code, Notion, Google Docs, Safari, Chrome, etc.).
+- **Fuzzy Search Popover**: Type the trigger prefix `\` to summon a floating, lightweight fuzzy-search window to find and insert snippets using arrow keys and Enter.
+- **Dynamic Variables & Fill-in Fields**: Supports dynamic template placeholders (e.g. current date, time, clipboard contents, custom cursor positions) for interactive forms and automated replies.
+- **End-to-End Encrypted iCloud Sync**: Automatically synchronizes snippets across all your Mac devices using your personal Apple iCloud (CloudKit Private Database). No secondary accounts, logins, or vendor servers required.
+- **macOS Native Manager**: A clean, native macOS window to organize snippets into categories, search, customize triggers, and export/import JSON backups.
+- **AI Prompt Accelerator**: Ideal for quick insertion of complex ChatGPT, Claude, and LLM master prompts and code review templates into AI web chat and developer tools.
+
+## Performance Benchmarks
+- **Memory Footprint**: < 20 MB RAM (over 90% lighter than Electron-based expanders).
+- **Expansion Latency**: < 1 ms response time from keystroke trigger to text replacement.
+- **Background CPU**: 0.0% idle CPU usage. Completely eliminates background battery drain.
+- **Architecture**: Native 64-bit ARM binary built for Apple Silicon (M1, M2, M3, M4 and newer).
+
+## Privacy & Security Architecture
+- **100% Local Keystroke Matching**: All keystroke detection is processed entirely in local memory on your Mac. Keystrokes are never logged to disk, never recorded, and never transmitted over the internet.
+- **Zero Third-Party Cloud Servers**: QuickMessage has no external telemetry, tracking, or analytics backend.
+- **Apple Keychain Encryption**: Local databases are protected by encryption keys generated on install and stored directly in the macOS Keychain.
+- **Apple CloudKit**: Cloud synchronization operates strictly within the user's private Apple iCloud container, inheriting Apple's end-to-end security model.
+- **Minimal Permissions**: Requires only standard macOS Accessibility permission solely to detect configured shortcut prefixes and insert expanded text into the active focused app.
+
+## Comparison with Alternatives
+- **vs TextExpander**: QuickMessage is a native Apple Silicon app with no monthly or annual subscription fees (TextExpander costs ~$40/year). It uses under 20MB of RAM vs 250MB–450MB on TextExpander, and syncs via personal Apple iCloud rather than proprietary third-party servers.
+- **vs aText**: QuickMessage features a modern Swift/Rust architecture optimized for recent macOS versions (Sonoma, Sequoia), zero legacy baggage, native iCloud CloudKit synchronization, and Mac App Store sandboxed security.
+- **vs Alfred Snippets**: QuickMessage provides a dedicated standalone Menu Bar tool with real-time popup suggestions (`\`) without requiring Alfred Powerpack purchase or complex workflow configurations.
+
+## Pricing & Availability
+- **Pricing**: Free to download on the Mac App Store.
+- **Platform**: macOS 13.0 (Ventura) or later.
+- **Hardware**: Apple Silicon Macs (M1/M2/M3/M4 or newer).
+
+## Important Links
+- **Official Website**: https://www.qmessage.online/
+- **Mac App Store**: https://apps.apple.com/us/app/quickmessage-text-expander/id6818796098
+- **Support**: https://www.qmessage.online/support
+- **Privacy Policy**: https://www.qmessage.online/privacy
