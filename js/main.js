@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPlayground();
   initFaqAccordion();
   initDownloadLinks();
+  initAnalyticsTracking();
 });
 
 /* ==========================================================================
@@ -936,6 +937,10 @@ function initPlayground() {
         ? `Đã chèn "${snippet.trigger}" thành công!`
         : `Successfully inserted "${snippet.trigger}"!`;
     }
+    trackWebEvent('web_playground_expand', {
+      trigger: snippet.trigger,
+      item_name: snippet.title
+    });
   }
 
   // Handle typing & backspace
@@ -973,6 +978,10 @@ function initPlayground() {
       textarea.focus();
       textarea.setSelectionRange(trigger.length, trigger.length);
       checkTrigger();
+      trackWebEvent('web_playground_pill', {
+        trigger: trigger,
+        item_name: trigger
+      });
     });
   });
 }
@@ -1002,16 +1011,124 @@ function initFaqAccordion() {
       if (!isOpen) {
         item.classList.add('active');
         answer.style.maxHeight = (answer.scrollHeight + 32) + 'px';
+        const qSpan = questionBtn.querySelector('[data-i18n]');
+        const qId = qSpan ? qSpan.getAttribute('data-i18n') : 'unknown';
+        const qText = qSpan ? qSpan.textContent.trim() : questionBtn.textContent.trim();
+        trackWebEvent('web_faq_open', {
+          question_id: qId,
+          item_name: qText.slice(0, 80)
+        });
       }
     });
   });
 }
 
 /* ==========================================================================
-   6. Global Actions & Helpers
+   6. Global Actions, Analytics & Helpers
    ========================================================================== */
 const GITHUB_RELEASE_REPO = 'Nguyenhongphuc98/QuickMessage-Release';
 let DMG_DOWNLOAD_URL = `https://github.com/${GITHUB_RELEASE_REPO}/releases/latest/download/QuickMessage.dmg`;
+
+function trackWebEvent(eventName, params = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, {
+      lang: currentLang,
+      ...params
+    });
+  }
+}
+
+function initAnalyticsTracking() {
+  // 1. Download buttons (navbar, hero, cta_bottom)
+  document.querySelectorAll('[data-download-dmg]').forEach(link => {
+    link.addEventListener('click', () => {
+      const loc = link.getAttribute('data-download-dmg') || 'unknown';
+      trackWebEvent('web_download_click', {
+        button_location: loc,
+        item_name: loc,
+        link_url: link.href
+      });
+      trackWebEvent(`web_download_${loc}`, {
+        link_url: link.href
+      });
+    });
+  });
+
+  // 2. Hero "Try Live Interactive Demo" CTA
+  const tryDemoBtn = document.getElementById('heroTryDemoBtn');
+  if (tryDemoBtn) {
+    tryDemoBtn.addEventListener('click', () => {
+      trackWebEvent('web_try_demo_click', { item_name: 'hero_try_demo' });
+    });
+  }
+
+  // 3. Hero Showcase Tabs & Replay / Pause controls
+  document.querySelectorAll('.showcase-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const scenario = tab.dataset.scenario || 'unknown';
+      trackWebEvent('web_showcase_tab', {
+        tab: scenario,
+        item_name: scenario
+      });
+    });
+  });
+
+  const replayBtn = document.getElementById('heroReplayBtn');
+  if (replayBtn) {
+    replayBtn.addEventListener('click', () => {
+      trackWebEvent('web_showcase_control', {
+        action: 'replay',
+        tab: currentScenarioKey,
+        item_name: `replay_${currentScenarioKey}`
+      });
+    });
+  }
+
+  const togglePlayBtn = document.getElementById('heroTogglePlayBtn');
+  if (togglePlayBtn) {
+    togglePlayBtn.addEventListener('click', () => {
+      trackWebEvent('web_showcase_control', {
+        action: isAutoPlaying ? 'resume' : 'pause',
+        tab: currentScenarioKey,
+        item_name: isAutoPlaying ? 'resume' : 'pause'
+      });
+    });
+  }
+
+  // 4. Language switcher (EN / VI)
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang || 'en';
+      trackWebEvent('web_lang_switch', {
+        selected_lang: lang,
+        item_name: lang
+      });
+    });
+  });
+
+  // 5. Navigation & Footer links
+  document.querySelectorAll('.nav-link, .footer-col a, .footer-legal a').forEach(link => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href') || '';
+      const label = (link.getAttribute('data-i18n') || link.textContent || '').trim();
+      trackWebEvent('web_nav_click', {
+        target: href,
+        item_name: label.slice(0, 60)
+      });
+    });
+  });
+
+  // 6. Feature / Usecase / Privacy / Metric Card clicks
+  document.querySelectorAll('.usecase-card, .privacy-card, .metric-card, .device-card, .spotlight-row').forEach(card => {
+    card.addEventListener('click', () => {
+      const titleEl = card.querySelector('.usecase-title, .privacy-card-title, .metric-label, .device-name, .spotlight-title');
+      const cardName = titleEl ? titleEl.textContent.trim() : 'card';
+      trackWebEvent('web_card_click', {
+        item_name: cardName.slice(0, 60)
+      });
+    });
+  });
+}
 
 function initDownloadLinks() {
   const links = document.querySelectorAll('[data-download-dmg]');
@@ -1051,3 +1168,4 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
+
