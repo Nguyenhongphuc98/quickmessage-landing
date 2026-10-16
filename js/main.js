@@ -1027,7 +1027,7 @@ function initFaqAccordion() {
    6. Global Actions, Analytics & Helpers
    ========================================================================== */
 const GITHUB_RELEASE_REPO = 'Nguyenhongphuc98/QuickMessage-Release';
-let DMG_DOWNLOAD_URL = `https://github.com/${GITHUB_RELEASE_REPO}/releases/latest/download/QuickMessage.dmg`;
+let DMG_DOWNLOAD_URL = `https://github.com/${GITHUB_RELEASE_REPO}/releases/download/v1.0.1/QuickMessage-v1.0.1-macos-arm64.dmg`;
 
 function trackWebEvent(eventName, params = {}) {
   if (typeof window.gtag === 'function') {
