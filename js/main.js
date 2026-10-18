@@ -134,6 +134,7 @@ const translations = {
     'faq.a4': 'QuickMessage runs natively on Apple Silicon Macs (M1 and later) with macOS 13 (Ventura) or later.',
     'faq.q5': 'Does QuickMessage work with web apps and AI chat tools like ChatGPT or Claude?',
     'faq.a5': 'Yes, absolutely! QuickMessage operates system-wide across all macOS browsers (Safari, Chrome, Arc, Brave) and native apps. You can expand complex AI prompts, code review templates, and custom instructions directly into ChatGPT with a single keystroke.',
+    'faq.contact_prompt': 'Have questions or need assistance? Reach out to',
 
     'cta.title': 'Ready to Accelerate Your Typing?',
     'cta.desc': 'Download QuickMessage and start saving hours of repetitive typing every week.',
@@ -144,8 +145,10 @@ const translations = {
     'footer.col1': 'Features',
     'footer.col2': 'Security',
     'footer.col3': 'Platform',
+    'footer.col4': 'Contact',
     'footer.cpr1': '© 2026 QuickMessage for macOS. Crafted for Mac enthusiasts.',
     'footer.cpr2': 'No ads. We never collect what you type.',
+    'footer.contact': 'Contact',
     'footer.support': 'Support',
     'footer.privacy': 'Privacy Policy'
   },
@@ -259,6 +262,7 @@ const translations = {
     'faq.a4': 'QuickMessage chạy native trên máy Mac chip Apple Silicon (M1 trở lên) với macOS 13 (Ventura) trở lên.',
     'faq.q5': 'QuickMessage có hoạt động trên trình duyệt web và các công cụ chat AI như ChatGPT, Claude không?',
     'faq.a5': 'Có, hoàn toàn tương thích! QuickMessage hoạt động trên toàn hệ thống macOS và mọi trình duyệt web (Safari, Chrome, Arc, Brave). Bạn có thể dễ dàng chèn các prompt phức tạp hay câu lệnh dài trực tiếp vào ô chat của ChatGPT chỉ trong 1 giây.',
+    'faq.contact_prompt': 'Bạn có câu hỏi hoặc cần hỗ trợ? Liên hệ ngay tại',
 
     'cta.title': 'Sẵn Sàng Tăng Tốc Độ Gõ Phím Của Bạn?',
     'cta.desc': 'Tải QuickMessage và bắt đầu tiết kiệm hàng giờ gõ các đoạn văn bản lặp lại mỗi tuần ngay từ hôm nay.',
@@ -269,8 +273,10 @@ const translations = {
     'footer.col1': 'Tính Năng',
     'footer.col2': 'Bảo Mật',
     'footer.col3': 'Nền Tảng',
+    'footer.col4': 'Liên hệ',
     'footer.cpr1': '© 2026 QuickMessage for macOS. Thiết kế tỉ mỉ cho người dùng Mac.',
     'footer.cpr2': 'Không quảng cáo. Không thu thập nội dung bạn gõ.',
+    'footer.contact': 'Liên hệ',
     'footer.support': 'Hỗ trợ',
     'footer.privacy': 'Chính sách quyền riêng tư'
   }

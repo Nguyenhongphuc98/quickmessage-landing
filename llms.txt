@@ -41,5 +41,6 @@ Unlike traditional text expanders built with web wrappers or Electron, QuickMess
 ## Important Links
 - **Official Website**: https://www.qmessage.online/
 - **Direct Download (.dmg)**: https://github.com/Nguyenhongphuc98/QuickMessage-Release/releases/latest/download/QuickMessage.dmg
-- **Support**: https://www.qmessage.online/support
+- **Support & FAQ**: https://www.qmessage.online/support
 - **Privacy Policy**: https://www.qmessage.online/privacy
+- **Contact & Support Email**: support@qmessage.online
